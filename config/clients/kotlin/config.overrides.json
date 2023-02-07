@@ -1,0 +1,4 @@
+{
+  "packageName": "com.nydig.platform.auth.clients.openfga",
+  "serializationLibrary": "jackson"
+}

@@ -123,6 +123,11 @@ test-client-python: build-client-python
 	# Need to ignore E402 (import order) to avoid circular dependency
 	make run-in-docker sdk_language=python image=python:${PYTHON_DOCKER_TAG} command="/bin/sh -c 'python -m pip install -r test-requirements.txt; python -m flake8 --ignore E501 test'"
 
+### Kotlin
+.PHONY: build-client-kotlin
+build-client-kotlin:
+	make build-client sdk_language=kotlin tmpdir=${TMP_DIR}
+
 .PHONY: run-in-docker
 run-in-docker:
 	docker run --rm \
